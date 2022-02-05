@@ -20,12 +20,23 @@
     </indentation>
 
     <comments>
+        <single>
+            <expression>//</expression>
+        </single>
         <multiline>
             <starts-with>
-                <expression>&lt;!--</expression>
+                <expression>(*</expression>
             </starts-with>
             <ends-with>
-                <expression>--&gt;</expression>
+                <expression>*)</expression>
+            </ends-with>
+        </multiline>
+        <multiline>
+            <starts-with>
+                <expression>{</expression>
+            </starts-with>
+            <ends-with>
+                <expression>}</expression>
             </ends-with>
         </multiline>
     </comments>
