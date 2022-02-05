@@ -12,13 +12,13 @@
 
     <indentation>
         <increase>
-            <expression>^\s*&lt;(([^!/?]|%)(?!.+?([/%]&gt;|&lt;/.+?&gt;))|[%!]--\s*$)</expression>
+            <expression>(\s*begin$)|(\s*BEGIN$)</expression>
         </increase>
         <decrease>
-            <expression>^\s*(&lt;/[^&gt;]+&gt;|--&gt;|--%&gt;)</expression>
+            <expression>(\s*end$)|(\s*END$)</expression>
         </decrease>
     </indentation>
-    
+
     <comments>
         <multiline>
             <starts-with>
@@ -29,11 +29,11 @@
             </ends-with>
         </multiline>
     </comments>
-    
+
     <brackets>
         <pair open="&lt;" close="&gt;" />
     </brackets>
-    
+
     <surrounding-pairs>
         <pair open="&lt;" close="&gt;" />
         <pair open="{" close="}" />
@@ -43,7 +43,7 @@
         <pair open="&quot;" close="&quot;" />
         <pair open="`" close="`" />
     </surrounding-pairs>
-    
+
     <scopes>
         <!-- Meta -->
         <scope name="mylang.meta.processing">
@@ -71,7 +71,7 @@
             </ends-with>
             <subscopes />
         </scope>
-        
+
         <!-- Comments -->
         <scope name="mylang.comment.block" spell-check="true">
             <starts-with>
@@ -81,10 +81,10 @@
                 <expression>--&gt;</expression>
             </ends-with>
         </scope>
-        
+
         <!-- Tags -->
         <include syntax="self" collection="tags" />
-        
+
         <!-- Values -->
         <scope name="html.value.entity.numeric">
             <expression>&amp;\#[0-9]+;</expression>
@@ -99,7 +99,7 @@
             </strings>
         </scope>
     </scopes>
-    
+
     <collections>
         <!-- Tags -->
         <collection name="tags">
@@ -129,7 +129,7 @@
                 </subscopes>
             </scope>
         </collection>
-        
+
         <!-- Tag Attributes -->
         <collection name="mylang.tag.attributes">
             <scope name="mylang.tag.attribute">
