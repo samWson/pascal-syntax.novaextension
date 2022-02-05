@@ -7,9 +7,9 @@
     </meta>
 
     <detectors>
-        <extension priority="1.0">mylang</extension>
+        <extension priority="1.0">pas,lpr,pp,inc</extension>
     </detectors>
-    
+
     <indentation>
         <increase>
             <expression>^\s*&lt;(([^!/?]|%)(?!.+?([/%]&gt;|&lt;/.+?&gt;))|[%!]--\s*$)</expression>
