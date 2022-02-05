@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<syntax name="mylang">
+<syntax name="pascal">
     <meta>
-        <name>Pascal Syntax</name>
-        <type>structured</type>
-        <preferred-file-extension>mylang</preferred-file-extension>
+        <name>Pascal</name>
+        <type>compiled</type>
+        <preferred-file-extension>pas</preferred-file-extension>
     </meta>
-    
+
     <detectors>
         <extension priority="1.0">mylang</extension>
     </detectors>

@@ -2,7 +2,7 @@
     "identifier": "org.PascalSyntax",
     "name": "Pascal Syntax",
     "organization": "MyOrganization",
-    "description": "Lorem ipsum, dolor sit amet.",
+    "description": "Syntax support for Pascal languages supported by the Free Pascal compiler.",
     "version": "0.0.1",
     "categories": ["languages"]
 }
