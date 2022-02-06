@@ -63,6 +63,22 @@
                 <expression>\/\/(.*)$</expression>
                 <capture number="1" name="pascal.comment.content" />
             </scope>
+            <scope name="pascal.comment.block.parentheses" spell-check="true">
+                <starts-with>
+                    <expression>\(\*</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>\*\)</expression>
+                </ends-with>
+            </scope>
+            <scope name="pascal.comment.block.braces" spell-check="true">
+                <starts-with>
+                    <expression>{</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>}</expression>
+                </ends-with>
+            </scope>
         </collection>
     </collections>
 </syntax>

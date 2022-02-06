@@ -1,5 +1,14 @@
+(* A comment using the earliest Pascal style *)
+
+(*
+multi
+line
+comment
+block
+*)
+
 {------------------------------------------------------------------------------}
-// Downloaded from https://learnxinyminutes.com/docs/pascal/
+// The below source was downloaded from https://learnxinyminutes.com/docs/pascal/
 
 //Anatomy of a Pascal Program
 //this is a comment
