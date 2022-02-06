@@ -44,3 +44,7 @@ is planned for a future update.
 
 P.S. If you'd like, you can remove these comments before submitting your extension 😉
 -->
+
+## License
+
+This is open source software under the 3-Clause BSD license (BSD-3-Clause). See the LICENSE file for details.
