@@ -55,6 +55,7 @@
 
     <scopes>
         <include syntax="self" collection="comments" />
+        <include syntax="self" collection="programs" />
     </scopes>
 
     <collections>
@@ -78,6 +79,13 @@
                 <ends-with>
                     <expression>}</expression>
                 </ends-with>
+            </scope>
+        </collection>
+        <collection name="programs">
+            <scope name="pascal.program.header">
+                <expression>^\s*(program)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
+                <capture number="1" name="pascal.keyword.statement.program" />
+                <capture number="2" name="pascal.identifier" />
             </scope>
         </collection>
     </collections>
