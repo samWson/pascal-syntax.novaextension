@@ -103,12 +103,12 @@
                     </display-name>
                 </symbol>
                 <starts-with>
-                    <expression>^\s*(unit)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
+                    <expression>^\s*(?i)(unit)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
                     <capture number="1" name="pascal.keyword.statement.unit" />
                     <capture number="2" name="pascal.identifier" />
                 </starts-with>
                 <ends-with>
-                    <expression>(end|END)(.)</expression>
+                    <expression>(?i)(end)(.)</expression>
                     <capture number="1" name="pascal.keyword.unit.end" />
                 </ends-with>
             </scope>
