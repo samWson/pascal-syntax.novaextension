@@ -108,7 +108,7 @@
                     <capture number="2" name="pascal.identifier" />
                 </starts-with>
                 <ends-with>
-                    <expression>(end|END).</expression>
+                    <expression>(end|END)(.)</expression>
                     <capture number="1" name="pascal.keyword.unit.end" />
                 </ends-with>
             </scope>
