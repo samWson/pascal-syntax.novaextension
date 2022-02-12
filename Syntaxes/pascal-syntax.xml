@@ -84,9 +84,15 @@
         </collection>
         <collection name="programs">
             <scope name="pascal.program.header">
-                <expression>^\s*(program)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
-                <capture number="1" name="pascal.keyword.statement.program" />
-                <capture number="2" name="pascal.identifier" />
+                <starts-with>
+                    <expression>^\s*(?i)(program)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
+                    <capture number="1" name="pascal.keyword.statement.program" />
+                    <capture number="2" name="pascal.identifier" />
+                </starts-with>
+                <ends-with>
+                    <expression>(?i)(end)(.)</expression>
+                    <capture number="1" name="pascal.keyword.program.end" />
+                </ends-with>
             </scope>
         </collection>
         <collection name="units">
