@@ -83,7 +83,7 @@
             </scope>
         </collection>
         <collection name="programs">
-            <scope name="pascal.program.header">
+            <scope name="pascal.program">
                 <starts-with>
                     <expression>^\s*(?i)(program)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
                     <capture number="1" name="pascal.keyword.statement.program" />
@@ -96,7 +96,7 @@
             </scope>
         </collection>
         <collection name="units">
-            <scope name="pascal.unit.header">
+            <scope name="pascal.unit">
                 <symbol type="type" scope="global">
                     <display-name>
                         <component selector="pascal.identifier"/>
