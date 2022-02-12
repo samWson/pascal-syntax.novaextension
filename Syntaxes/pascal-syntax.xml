@@ -56,6 +56,7 @@
     <scopes>
         <include syntax="self" collection="comments" />
         <include syntax="self" collection="programs" />
+        <include syntax="self" collection="units" />
     </scopes>
 
     <collections>
@@ -86,6 +87,24 @@
                 <expression>^\s*(program)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
                 <capture number="1" name="pascal.keyword.statement.program" />
                 <capture number="2" name="pascal.identifier" />
+            </scope>
+        </collection>
+        <collection name="units">
+            <scope name="pascal.unit.header">
+                <symbol type="type" scope="global">
+                    <display-name>
+                        <component selector="pascal.identifier"/>
+                    </display-name>
+                </symbol>
+                <starts-with>
+                    <expression>^\s*(unit)\s+([_a-zA-Z]{1}[\w\d][^-]*)\s*;</expression>
+                    <capture number="1" name="pascal.keyword.statement.unit" />
+                    <capture number="2" name="pascal.identifier" />
+                </starts-with>
+                <ends-with>
+                    <expression>(end|END).</expression>
+                    <capture number="1" name="pascal.keyword.unit.end" />
+                </ends-with>
             </scope>
         </collection>
     </collections>
