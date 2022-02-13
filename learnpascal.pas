@@ -1,3 +1,12 @@
+unit Abm;
+
+interface
+
+implementation
+
+end.
+
+
 (* A comment using the earliest Pascal style *)
 
 (*
@@ -39,7 +48,7 @@ begin
     {
         area to declare your instruction
     }
-end. // End of a main program area should require a "." symbol
+END. // End of a main program area should require a "." symbol
 
 //When declaring variables
 //you can do this

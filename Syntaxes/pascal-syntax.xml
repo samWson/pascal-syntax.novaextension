@@ -111,6 +111,22 @@
                     <expression>(?i)(end)(.)</expression>
                     <capture number="1" name="pascal.keyword.unit.end" />
                 </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="interface" />
+                    <include syntax="self" collection="implementation" />
+                </subscopes>
+            </scope>
+        </collection>
+        <collection name="interface">
+            <scope name="pascal.unit.interface">
+                <expression>(?i)(interface)</expression>
+                <capture number="1" name="pascal.keyword.interface" />
+            </scope>
+        </collection>
+        <collection name="implementation">
+            <scope name="pascal.unit.implementation">
+                <expression>(?i)(implementation)</expression>
+                <capture number="1" name="pascal.keyword.implementation" />
             </scope>
         </collection>
     </collections>
