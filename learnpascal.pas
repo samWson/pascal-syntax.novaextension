@@ -1,8 +1,18 @@
 unit Abm;
-
+{
+    this is a
+    multiline comment
+}
 interface
 
+(*
+multi
+line
+comment
+block
+*)
 implementation
+// comment
 
 end.
 

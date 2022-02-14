@@ -93,6 +93,9 @@
                     <expression>(?i)(end)(.)</expression>
                     <capture number="1" name="pascal.keyword.program.end" />
                 </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="comments" />
+                </subscopes>
             </scope>
         </collection>
         <collection name="units">
@@ -114,6 +117,7 @@
                 <subscopes>
                     <include syntax="self" collection="interface" />
                     <include syntax="self" collection="implementation" />
+                    <include syntax="self" collection="comments" />
                 </subscopes>
             </scope>
         </collection>
