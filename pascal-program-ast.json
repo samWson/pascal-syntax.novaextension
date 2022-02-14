@@ -1,0 +1,13 @@
+// A Pascal program described as an Abstract Syntax Tree.
+{
+	"program": "PascalProgram",
+	"interface": [],
+	"uses": ["UnitA"],
+	"const": [],
+	"type": [],
+	"procedure": {
+		"identifier": "addTwoNumbers",
+		"compound statement": [] // `begin end.`
+	},
+	"compound statement": [] // `begin end.`
+}
