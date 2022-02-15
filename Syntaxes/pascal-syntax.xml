@@ -131,8 +131,10 @@
         </collection>
         <collection name="implementation">
             <scope name="pascal.unit.implementation">
-                <expression>(?i)(implementation)</expression>
+                <expression>(?i)(implementation)\s+(uses)\s+([\w]+.*);</expression>
                 <capture number="1" name="pascal.keyword.implementation" />
+                <capture number="2" name="pascal.keyword.uses" />
+                <capture number="3" name="pascal.keyword.uses.clause" />
             </scope>
         </collection>
     </collections>

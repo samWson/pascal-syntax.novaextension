@@ -11,7 +11,7 @@ line
 comment
 block
 *)
-implementation
+implementation uses Addition, Subtraction;
 // comment
 
 end.
