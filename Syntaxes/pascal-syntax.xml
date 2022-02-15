@@ -123,8 +123,10 @@
         </collection>
         <collection name="interface">
             <scope name="pascal.unit.interface">
-                <expression>(?i)(interface)</expression>
+                <expression>(?i)(interface)\s+(uses)\s+([\w]+.*);</expression>
                 <capture number="1" name="pascal.keyword.interface" />
+                <capture number="2" name="pascal.keyword.uses" />
+                <capture number="3" name="pascal.keyword.uses.clause" />
             </scope>
         </collection>
         <collection name="implementation">

@@ -1,10 +1,9 @@
-unit Addition;
+unit Math;
 {
     this is a
     multiline comment
 }
-interface
-uses Subtraction;
+interface uses Addition, Subtraction;
 
 (*
 multi
