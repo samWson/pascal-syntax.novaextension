@@ -95,6 +95,7 @@
                 </ends-with>
                 <subscopes>
                     <include syntax="self" collection="comments" />
+                    <include syntax="self" collection="uses" />
                 </subscopes>
             </scope>
         </collection>
@@ -119,6 +120,13 @@
                     <include syntax="self" collection="implementation" />
                     <include syntax="self" collection="comments" />
                 </subscopes>
+            </scope>
+        </collection>
+        <collection name="uses">
+            <scope name="pascal.program.uses">
+                <expression>\b(?i)(uses)\s+([\w]+.*);</expression>
+                <capture number="1" name="pascal.keyword.uses" />
+                <capture number="2" name="pascal.keyword.uses.clause" />
             </scope>
         </collection>
         <collection name="interface">
