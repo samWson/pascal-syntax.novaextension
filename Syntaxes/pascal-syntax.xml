@@ -96,6 +96,9 @@
                 <subscopes>
                     <include syntax="self" collection="comments" />
                     <include syntax="self" collection="uses" />
+                    <include syntax="self" collection="types" />
+                    <include syntax="self" collection="constants" />
+                    <include syntax="self" collection="variables" />
                 </subscopes>
             </scope>
         </collection>
@@ -127,6 +130,24 @@
                 <expression>\b(?i)(uses)\s+([\w]+.*);</expression>
                 <capture number="1" name="pascal.keyword.uses" />
                 <capture number="2" name="pascal.keyword.uses.clause" />
+            </scope>
+        </collection>
+        <collection name="types">
+            <scope name="pascal.type-declaration">
+                <expression>(?i)(type)</expression>
+                <capture number="1" name="pascal.keyword.type" />
+            </scope>
+        </collection>
+        <collection name="constants">
+            <scope name="pascal.constant-declaration">
+                <expression>(?i)(const)</expression>
+                <capture number="1" name="pascal.keyword.const" />
+            </scope>
+        </collection>
+        <collection name="variables">
+            <scope name="pascal.variable-declaration">
+                <expression>(?i)(var)</expression>
+                <capture number="1" name="pascaal.keyword.var" />
             </scope>
         </collection>
         <collection name="interface">
