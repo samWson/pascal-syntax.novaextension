@@ -5,6 +5,14 @@ unit Math;
 }
 interface uses Addition, Subtraction;
 
+const
+  PI = 3.14;
+
+type
+  Vector = Array of Integer;
+
+var
+  result: Integer;
 (*
 multi
 line

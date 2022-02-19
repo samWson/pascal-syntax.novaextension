@@ -122,6 +122,9 @@
                     <include syntax="self" collection="interface" />
                     <include syntax="self" collection="implementation" />
                     <include syntax="self" collection="comments" />
+                    <include syntax="self" collection="types" />
+                    <include syntax="self" collection="constants" />
+                    <include syntax="self" collection="variables" />
                 </subscopes>
             </scope>
         </collection>
