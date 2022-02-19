@@ -90,7 +90,7 @@
                     <capture number="2" name="pascal.identifier" />
                 </starts-with>
                 <ends-with>
-                    <expression>(?i)(end)(.)</expression>
+                    <expression>(?i)(end)\.</expression>
                     <capture number="1" name="pascal.keyword.program.end" />
                 </ends-with>
                 <subscopes>
