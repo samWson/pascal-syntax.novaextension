@@ -99,6 +99,7 @@
                     <include syntax="self" collection="types" />
                     <include syntax="self" collection="constants" />
                     <include syntax="self" collection="variables" />
+                    <include syntax="self" collection="functions" />
                 </subscopes>
             </scope>
         </collection>
@@ -125,6 +126,7 @@
                     <include syntax="self" collection="types" />
                     <include syntax="self" collection="constants" />
                     <include syntax="self" collection="variables" />
+                    <include syntax="self" collection="functions" />
                 </subscopes>
             </scope>
         </collection>
@@ -167,6 +169,18 @@
                 <capture number="1" name="pascal.keyword.implementation" />
                 <capture number="2" name="pascal.keyword.uses" />
                 <capture number="3" name="pascal.keyword.uses.clause" />
+            </scope>
+        </collection>
+        <collection name="functions">
+            <scope name="pascal.function">
+                <symbol type="function">
+                    <context behavior="subtree" />
+                </symbol>
+                <expression>(?i)(function)\s+([\w]+)(\(.*\)):\s+([\w]+);</expression>
+                <capture number="1" name="pascal.keyword.function" />
+                <capture number="2" name="pascal.function.identifier" />
+                <capture number="3" name="pascal.function.parameter-list" />
+                <capture number="4" name="pascal.function.result-type" />
             </scope>
         </collection>
     </collections>

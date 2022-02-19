@@ -22,6 +22,11 @@ block
 implementation uses Addition, Subtraction;
 // comment
 
+function addTwo(value: Integer): Integer;
+begin
+  result := Addition.add(value, 2);
+end;
+
 end.
 
 
