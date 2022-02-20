@@ -101,6 +101,7 @@
                     <include syntax="self" collection="variables" />
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
+                    <include syntax="self" collection="procedures" />
                 </subscopes>
             </scope>
         </collection>
@@ -129,6 +130,7 @@
                     <include syntax="self" collection="variables" />
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
+                    <include syntax="self" collection="procedures" />
                 </subscopes>
             </scope>
         </collection>
@@ -198,6 +200,17 @@
                 <subscopes>
                     <include syntax="self" collection="compound-statements" />
                 </subscopes>
+            </scope>
+        </collection>
+        <collection name="procedures">
+            <scope name="pascal.procedure">
+                <symbol type="function">
+                    <context behavior="subtree" />
+                </symbol>
+                <expression>(?i)(procedure)\s+([\w]+)(\(.*\));</expression>
+                <capture number="1" name="pascal.keyword.procedure" />
+                <capture number="2" name="pascal.procedure.identifier" />
+                <capture number="3" name="pascal.procedures.parameter-list" />
             </scope>
         </collection>
     </collections>

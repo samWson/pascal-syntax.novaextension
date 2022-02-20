@@ -27,6 +27,11 @@ begin
   result := Addition.add(value, 2);
 end;
 
+procedure printInteger(value: Integer);
+begin
+  Write(value)
+end;
+
 end.
 
 
