@@ -100,6 +100,7 @@
                     <include syntax="self" collection="constants" />
                     <include syntax="self" collection="variables" />
                     <include syntax="self" collection="functions" />
+                    <include syntax="self" collection="compound-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -127,6 +128,7 @@
                     <include syntax="self" collection="constants" />
                     <include syntax="self" collection="variables" />
                     <include syntax="self" collection="functions" />
+                    <include syntax="self" collection="compound-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -181,6 +183,21 @@
                 <capture number="2" name="pascal.function.identifier" />
                 <capture number="3" name="pascal.function.parameter-list" />
                 <capture number="4" name="pascal.function.result-type" />
+            </scope>
+        </collection>
+        <collection name="compound-statements">
+            <scope name="pascal.compound-statement">
+                <starts-with>
+                    <expression>(?i)(begin)</expression>
+                    <capture number="1" name="pascal.keyword.begin" />
+                </starts-with>
+                <ends-with>
+                    <expression>(?i)(end)</expression>
+                    <capture number="1" name="pascal.keyword.end" />
+                </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
         </collection>
     </collections>
