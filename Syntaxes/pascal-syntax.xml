@@ -102,6 +102,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
+                    <include syntax="self" collection="for-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -131,6 +132,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
+                    <include syntax="self" collection="for-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -199,6 +201,7 @@
                 </ends-with>
                 <subscopes>
                     <include syntax="self" collection="compound-statements" />
+                    <include syntax="self" collection="for-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -211,6 +214,26 @@
                 <capture number="1" name="pascal.keyword.procedure" />
                 <capture number="2" name="pascal.procedure.identifier" />
                 <capture number="3" name="pascal.procedures.parameter-list" />
+            </scope>
+        </collection>
+        <collection name="for-statements">
+            <scope name="pascal.statement.for.to">
+                <expression>(?i)(for)\s+(.+)\s+:=\s+(.+)\s+(to)\s+(.+)\s+(do)</expression>
+                <capture number="1" name="pascal.keyword.for" />
+                <capture number="2" name="pascal.for.control-variable" />
+                <capture number="3" name="pascal.for.initial-value" />
+                <capture number="4" name="pascal.keyword.to" />
+                <capture number="5" name="pascal.for.final-value" />
+                <capture number="6" name="pascal.keyword.do" />
+            </scope>
+            <scope name="pascal.statement.for.downto">
+                <expression>(?i)(for)\s+(.+)\s+:=\s+(.+)\s+(downto)\s+(.+)\s+(do)</expression>
+                <capture number="1" name="pascal.keyword.for" />
+                <capture number="2" name="pascal.for.control-variable" />
+                <capture number="3" name="pascal.for.initial-value" />
+                <capture number="4" name="pascal.keyword.downto" />
+                <capture number="5" name="pascal.for.final-value" />
+                <capture number="6" name="pascal.keyword.do" />
             </scope>
         </collection>
     </collections>

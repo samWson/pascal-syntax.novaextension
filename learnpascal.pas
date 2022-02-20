@@ -32,6 +32,18 @@ begin
   Write(value)
 end;
 
+procedure printIntegerTenTimes(value: Integer);
+begin
+  for i := 1 to 10 do
+    printInteger(value)
+end;
+
+procedure countDown(value: Integer);
+begin
+  for i := value downto 0 do
+    Writeln(value)
+end;
+
 end.
 
 
