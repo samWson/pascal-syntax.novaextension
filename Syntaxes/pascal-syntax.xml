@@ -103,6 +103,7 @@
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
                     <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="if-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -133,6 +134,7 @@
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
                     <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="if-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -202,6 +204,7 @@
                 <subscopes>
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="if-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -234,6 +237,18 @@
                 <capture number="4" name="pascal.keyword.downto" />
                 <capture number="5" name="pascal.for.final-value" />
                 <capture number="6" name="pascal.keyword.do" />
+            </scope>
+        </collection>
+        <collection name="if-statements">
+            <scope name="pascal.statement.if">
+                <expression>(?i)(if)\s+(.+)\s+(then)</expression>
+                <capture number="1" name="pascal.keyword.if" />
+                <capture number="2" name="pascal.expression" />
+                <capture number="3" name="pascal.keyword.then" />
+            </scope>
+            <scope name="pascal.statement.else">
+                <expression>(?i)(else)</expression>
+                <capture number="1" name="pacal.keyword.else" />
             </scope>
         </collection>
     </collections>
