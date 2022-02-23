@@ -52,9 +52,9 @@ end;
 procedure printEvenOrOdd(value: Integer);
 begin
   if value mod 2 not = 0 then
-    Write("Odd")
+    Write('Odd')
   else
-    Write("Even")
+    Write('Even')
 end;
 
 procedure printPoint(value: Point);
