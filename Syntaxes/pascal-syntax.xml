@@ -104,6 +104,7 @@
                     <include syntax="self" collection="procedures" />
                     <include syntax="self" collection="for-statements" />
                     <include syntax="self" collection="if-statements" />
+                    <include syntax="self" collection="with-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -135,6 +136,7 @@
                     <include syntax="self" collection="procedures" />
                     <include syntax="self" collection="for-statements" />
                     <include syntax="self" collection="if-statements" />
+                    <include syntax="self" collection="with-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -205,6 +207,7 @@
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="for-statements" />
                     <include syntax="self" collection="if-statements" />
+                    <include syntax="self" collection="with-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -248,7 +251,15 @@
             </scope>
             <scope name="pascal.statement.else">
                 <expression>(?i)(else)</expression>
-                <capture number="1" name="pacal.keyword.else" />
+                <capture number="1" name="pascal.keyword.else" />
+            </scope>
+        </collection>
+        <collection name="with-statements">
+            <scope name="pascal.statement.with">
+                <expression>(?i)(with)\s+([a-z_]+[a-z_0-9]*)\s+(do)</expression>
+                <capture number="1" name="pascal.keyword.with" />
+                <capture number="2" name="pascal.identifier" />
+                <capture number="3" name="pascal.keyword.do" />
             </scope>
         </collection>
     </collections>

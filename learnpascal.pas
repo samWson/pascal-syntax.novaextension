@@ -11,6 +11,11 @@ const
 type
   Vector = Array of Integer;
 
+  Point = record
+    x : Integer;
+    y : Integer;
+  end;
+
 var
   result: Integer;
 (*
@@ -50,6 +55,16 @@ begin
     Write("Odd")
   else
     Write("Even")
+end;
+
+procedure printPoint(value: Point);
+begin
+  with value do
+  begin
+    Writeln(x);
+    Writeln(y)
+  end;
+
 end;
 
 end.
