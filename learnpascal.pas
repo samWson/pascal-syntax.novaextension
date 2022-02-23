@@ -63,8 +63,17 @@ begin
   begin
     Writeln(x);
     Writeln(y)
-  end;
+  end
+end;
 
+procedure printXTimes(value: Integer);
+var
+  i =: value;
+begin
+  repeat
+    Write(value);
+    i := i - 1
+  until value < 0;
 end;
 
 end.

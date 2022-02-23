@@ -102,7 +102,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
-                    <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="loop-statements" />
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
@@ -135,7 +135,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
-                    <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="loop-statements" />
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
@@ -207,7 +207,7 @@
                 </ends-with>
                 <subscopes>
                     <include syntax="self" collection="compound-statements" />
-                    <include syntax="self" collection="for-statements" />
+                    <include syntax="self" collection="loop-statements" />
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
@@ -225,7 +225,7 @@
                 <capture number="3" name="pascal.procedures.parameter-list" />
             </scope>
         </collection>
-        <collection name="for-statements">
+        <collection name="loop-statements">
             <scope name="pascal.statement.for.to">
                 <expression>(?i)(for)\s+(.+)\s+:=\s+(.+)\s+(to)\s+(.+)\s+(do)</expression>
                 <capture number="1" name="pascal.keyword.for" />
@@ -243,6 +243,17 @@
                 <capture number="4" name="pascal.keyword.downto" />
                 <capture number="5" name="pascal.for.final-value" />
                 <capture number="6" name="pascal.keyword.do" />
+            </scope>
+            <scope name ="pascal.statement.repeat">
+                <starts-with>
+                    <expression>(?i)(repeat)</expression>
+                    <capture number="1" name="pascal.keyword.repeat" />
+                </starts-with>
+                <ends-with>
+                    <expression>(?i)(until)\s+(.+)\s*;</expression>
+                    <capture number="1" name="pascal.keyword.until" />
+                    <capture number="2" name="pascal.until.expression" />
+                </ends-with>
             </scope>
         </collection>
         <collection name="if-statements">
