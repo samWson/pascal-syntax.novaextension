@@ -234,6 +234,9 @@
                 <capture number="4" name="pascal.keyword.to" />
                 <capture number="5" name="pascal.for.final-value" />
                 <capture number="6" name="pascal.keyword.do" />
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
             <scope name="pascal.statement.for.downto">
                 <expression>(?i)(for)\s+(.+)\s+:=\s+(.+)\s+(downto)\s+(.+)\s+(do)</expression>
@@ -243,6 +246,9 @@
                 <capture number="4" name="pascal.keyword.downto" />
                 <capture number="5" name="pascal.for.final-value" />
                 <capture number="6" name="pascal.keyword.do" />
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
             <scope name="pascal.statement.repeat">
                 <starts-with>
@@ -254,12 +260,18 @@
                     <capture number="1" name="pascal.keyword.until" />
                     <capture number="2" name="pascal.until.expression" />
                 </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
             <scope name="pascal.statement.while">
                 <expression>(?i)(while)\s+(.+)\s+(do)</expression>
                 <capture number="1" name="pascal.keyword.while" />
                 <capture number="2" name="pascal.while.expression" />
                 <capture number="3" name="pascal.keyword.do" />
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
         </collection>
         <collection name="if-statements">
