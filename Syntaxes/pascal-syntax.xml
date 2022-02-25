@@ -244,7 +244,7 @@
                 <capture number="5" name="pascal.for.final-value" />
                 <capture number="6" name="pascal.keyword.do" />
             </scope>
-            <scope name ="pascal.statement.repeat">
+            <scope name="pascal.statement.repeat">
                 <starts-with>
                     <expression>(?i)(repeat)</expression>
                     <capture number="1" name="pascal.keyword.repeat" />
@@ -254,6 +254,12 @@
                     <capture number="1" name="pascal.keyword.until" />
                     <capture number="2" name="pascal.until.expression" />
                 </ends-with>
+            </scope>
+            <scope name="pascal.statement.while">
+                <expression>(?i)(while)\s+(.+)\s+(do)</expression>
+                <capture number="1" name="pascal.keyword.while" />
+                <capture number="2" name="pascal.while.expression" />
+                <capture number="3" name="pascal.keyword.do" />
             </scope>
         </collection>
         <collection name="if-statements">

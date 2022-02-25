@@ -68,12 +68,23 @@ end;
 
 procedure printXTimes(value: Integer);
 var
-  i =: value;
+  i := value;
 begin
   repeat
-    Write(value);
+    Write(i);
     i := i - 1
-  until value < 0;
+  until i < 0;
+end;
+
+procedure repeatWhileTrue(value: Integer);
+var
+  i := value;
+begin
+  while i < 10 do
+  begin
+    Write(i);
+    i := i + 1
+  end
 end;
 
 end.
