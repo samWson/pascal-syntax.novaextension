@@ -106,6 +106,7 @@
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
+                    <include syntax="self" collection="case-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -139,6 +140,7 @@
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
+                    <include syntax="self" collection="case-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -211,6 +213,7 @@
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
+                    <include syntax="self" collection="case-statements" />
                 </subscopes>
             </scope>
         </collection>
@@ -304,6 +307,23 @@
                     <expression>(')</expression>
                     <capture number="1" name="pascal.syntax.single-quote" />
                 </ends-with>
+            </scope>
+        </collection>
+        <collection name="case-statements">
+            <scope name="pascal.statement.case">
+                <starts-with>
+                    <expression>(?i)(case)\s+(.+)\s+(of)</expression>
+                    <capture number="1" name="pascal.keyword.case" />
+                    <capture number="2" name="pascal.case.expression" />
+                    <capture number="3" name="pascal.keyword.do" />
+                </starts-with>
+                <ends-with>
+                    <expression>(?i)(end);</expression>
+                    <capture number="1" name="pascal.keyword.end" />
+                </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="compound-statements" />
+                </subscopes>
             </scope>
         </collection>
     </collections>

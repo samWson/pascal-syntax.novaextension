@@ -87,6 +87,14 @@ begin
   end
 end;
 
+procedure vowelOrConsonant(value: String);
+case value of
+  'a', 'e', 'i', 'o', 'u' : Writeln('vowel');
+  'y' : Writeln('depends on the langauge');
+else
+  Writeln('consonant')
+end;
+
 end.
 
 
