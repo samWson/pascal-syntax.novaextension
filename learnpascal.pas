@@ -3,97 +3,99 @@ unit Math;
     this is a
     multiline comment
 }
-interface uses Addition, Subtraction;
+interface
+  uses Addition, Subtraction;
 
-const
-  PI = 3.14;
+  const
+    PI = 3.14;
 
-type
-  Vector = Array of Integer;
+  type
+    Vector = Array of Integer;
 
-  Point = record
-    x : Integer;
-    y : Integer;
-  end;
+    Point = record
+      x : Integer;
+      y : Integer;
+    end;
 
-var
-  result: Integer;
-(*
-multi
-line
-comment
-block
-*)
-implementation uses Addition, Subtraction;
+  var
+    result: Integer;
+  (*
+  multi
+  line
+  comment
+  block
+  *)
+implementation
+  uses Addition, Subtraction;
 // comment
 
-function addTwo(value: Integer): Integer;
-begin
-  result := Addition.add(value, 2);
-end;
+  function addTwo(value: Integer): Integer;
+  begin
+    result := Addition.add(value, 2);
+  end;
 
-procedure printInteger(value: Integer);
-begin
-  Write(value)
-end;
+  procedure printInteger(value: Integer);
+  begin
+    Write(value)
+  end;
 
-procedure printIntegerTenTimes(value: Integer);
-begin
-  for i := 1 to 10 do
-    printInteger(value)
-end;
+  procedure printIntegerTenTimes(value: Integer);
+  begin
+    for i := 1 to 10 do
+      printInteger(value)
+  end;
 
-procedure countDown(value: Integer);
-begin
-  for i := value downto 0 do
-    Writeln(value)
-end;
+  procedure countDown(value: Integer);
+  begin
+    for i := value downto 0 do
+      Writeln(value)
+  end;
 
-procedure printEvenOrOdd(value: Integer);
-begin
-  if value mod 2 not = 0 then
-    Write('Odd')
+  procedure printEvenOrOdd(value: Integer);
+  begin
+    if value mod 2 not = 0 then
+      Write('Odd')
+    else
+      Write('Even')
+  end;
+
+  procedure printPoint(value: Point);
+  begin
+    with value do
+    begin
+      Writeln(x);
+      Writeln(y)
+    end
+  end;
+
+  procedure printXTimes(value: Integer);
+  var
+    i := value;
+  begin
+    repeat
+      Write(i);
+      i := i - 1
+    until i < 0;
+  end;
+
+  procedure repeatWhileTrue(value: Integer);
+  var
+    i := value;
+  begin
+    while i < 10 do
+    begin
+      Write(i);
+      i := i + 1
+    end
+  end;
+
+  procedure vowelOrConsonant(value: String);
+  case value of
+    'a', 'e', 'i', 'o', 'u' : Writeln('vowel');
+    'y' : Writeln('depends on the langauge');
   else
-    Write('Even')
-end;
-
-procedure printPoint(value: Point);
-begin
-  with value do
-  begin
-    Writeln(x);
-    Writeln(y)
-  end
-end;
-
-procedure printXTimes(value: Integer);
-var
-  i := value;
-begin
-  repeat
-    Write(i);
-    i := i - 1
-  until i < 0;
-end;
-
-procedure repeatWhileTrue(value: Integer);
-var
-  i := value;
-begin
-  while i < 10 do
-  begin
-    Write(i);
-    i := i + 1
-  end
-end;
-
-procedure vowelOrConsonant(value: String);
-case value of
-  'a', 'e', 'i', 'o', 'u' : Writeln('vowel');
-  'y' : Writeln('depends on the langauge');
-else
-  Writeln('consonant')
-end;
+    Writeln('consonant')
+  end;
 
 end.
 

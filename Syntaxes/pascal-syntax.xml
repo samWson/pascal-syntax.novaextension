@@ -171,18 +171,14 @@
         </collection>
         <collection name="interface">
             <scope name="pascal.unit.interface">
-                <expression>(?i)(interface)\s+(uses)\s+([\w]+.*);</expression>
+                <expression>(?i)(interface)</expression>
                 <capture number="1" name="pascal.keyword.interface" />
-                <capture number="2" name="pascal.keyword.uses" />
-                <capture number="3" name="pascal.keyword.uses.clause" />
             </scope>
         </collection>
         <collection name="implementation">
             <scope name="pascal.unit.implementation">
-                <expression>(?i)(implementation)\s+(uses)\s+([\w]+.*);</expression>
+                <expression>(?i)(implementation)</expression>
                 <capture number="1" name="pascal.keyword.implementation" />
-                <capture number="2" name="pascal.keyword.uses" />
-                <capture number="3" name="pascal.keyword.uses.clause" />
             </scope>
         </collection>
         <collection name="functions">
