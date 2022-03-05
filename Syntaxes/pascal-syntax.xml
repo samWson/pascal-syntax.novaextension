@@ -107,6 +107,7 @@
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
+                    <include syntax="self" collection="operators" />
                 </subscopes>
             </scope>
         </collection>
@@ -141,6 +142,7 @@
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
+                    <include syntax="self" collection="operators" />
                 </subscopes>
             </scope>
         </collection>
@@ -210,6 +212,7 @@
                     <include syntax="self" collection="with-statements" />
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
+                    <include syntax="self" collection="operators" />
                 </subscopes>
             </scope>
         </collection>
@@ -320,6 +323,24 @@
                 <subscopes>
                     <include syntax="self" collection="compound-statements" />
                 </subscopes>
+            </scope>
+        </collection>
+        <collection name="operators">
+            <scope name="pascal.operators.boolean.and">
+                <expression>(?i)\b(and)\b</expression>
+                <capture number="1" name="pascal.keyword.and" />
+            </scope>
+            <scope name="pascal.operators.boolean.or">
+              <expression>(?i)\b(or)\b</expression>
+              <capture number="1" name="pascal.keyword.or" />
+            </scope>
+            <scope name="pascal.operators.boolean.not">
+              <expression>(?i)\b(not)\b</expression>
+              <capture number="1" name="pascal.keyword.not" />
+            </scope>
+            <scope name="pascal.operators.boolean.xor">
+              <expression>(?i)\b(xor)\b</expression>
+              <capture number="1" name="pascal.keyword.xor" />
             </scope>
         </collection>
     </collections>

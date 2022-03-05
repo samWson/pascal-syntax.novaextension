@@ -97,6 +97,32 @@ implementation
     Writeln('consonant')
   end;
 
+  procedure assert(test: boolean);
+  begin
+    if not test then
+      raise Exception.create();
+  end;
+
+  function booleanAnd(left, right: Boolean): Boolean;
+  begin
+    booleanAnd := left and right;
+  end;
+
+  function booleanOr(left, right: Boolean): Boolean;
+  begin
+    booleanOr := left or right;
+  end;
+
+  function booleanNot(value: Boolean): Boolean;
+  begin
+    booleanNot := not value;
+  end;
+
+  function booleanXor(left, right: Boolean): Boolean;
+  begin
+    booleanXor := left xor right;
+  end;
+
 end.
 
 
