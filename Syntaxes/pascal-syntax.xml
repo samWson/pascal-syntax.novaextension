@@ -328,19 +328,19 @@
         <collection name="operators">
             <scope name="pascal.operators.boolean.and">
                 <expression>(?i)\b(and)\b</expression>
-                <capture number="1" name="pascal.keyword.and" />
+                <capture number="1" name="pascal.keyword.operator.and" />
             </scope>
             <scope name="pascal.operators.boolean.or">
               <expression>(?i)\b(or)\b</expression>
-              <capture number="1" name="pascal.keyword.or" />
+              <capture number="1" name="pascal.keyword.operator.or" />
             </scope>
             <scope name="pascal.operators.boolean.not">
               <expression>(?i)\b(not)\b</expression>
-              <capture number="1" name="pascal.keyword.not" />
+              <capture number="1" name="pascal.keyword.operator.not" />
             </scope>
             <scope name="pascal.operators.boolean.xor">
               <expression>(?i)\b(xor)\b</expression>
-              <capture number="1" name="pascal.keyword.xor" />
+              <capture number="1" name="pascal.keyword.operator.xor" />
             </scope>
         </collection>
     </collections>
