@@ -108,6 +108,7 @@
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
+                    <include syntax="self" collection="exceptions" />
                 </subscopes>
             </scope>
         </collection>
@@ -143,6 +144,7 @@
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
+                    <include syntax="self" collection="exceptions" />
                 </subscopes>
             </scope>
         </collection>
@@ -213,6 +215,7 @@
                     <include syntax="self" collection="strings" />
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
+                    <include syntax="self" collection="exceptions" />
                 </subscopes>
             </scope>
         </collection>
@@ -341,6 +344,12 @@
             <scope name="pascal.operators.boolean.xor">
               <expression>(?i)\b(xor)\b</expression>
               <capture number="1" name="pascal.keyword.operator.xor" />
+            </scope>
+        </collection>
+        <collection name="exceptions">
+            <scope name="pascal.statement.raise">
+              <expression>(?i)\b(raise)\b</expression>
+              <capture number="1" name="pascal.keyword.condition.raise" />
             </scope>
         </collection>
     </collections>
