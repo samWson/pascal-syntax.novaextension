@@ -224,10 +224,12 @@
                 <symbol type="function">
                     <context behavior="subtree" />
                 </symbol>
-                <expression>(?i)(procedure)\s+([\w]+)(\(.*\));</expression>
-                <capture number="1" name="pascal.keyword.construct.procedure" />
-                <capture number="2" name="pascal.identifier.function" />
-                <capture number="3" name="pascal.procedures.parameter-list" />
+                <expression>(?i)(generic)?\s?(procedure)\s+([\w]+)(&lt;.&gt;)?(\(.*\));</expression>
+                <capture number="1" name="pascal.keyword.modifier.generic" />
+                <capture number="2" name="pascal.keyword.construct.procedure" />
+                <capture number="3" name="pascal.identifier.function" />
+                <capture number="4" name="pascal.identifier.type" />
+                <capture number="5" name="pascal.function.parameter-list" />
             </scope>
         </collection>
         <collection name="loop-statements">

@@ -123,6 +123,11 @@ implementation
     booleanXor := left xor right;
   end;
 
+  generic procedure assertEqual<T>(actual, expected: T);
+  begin
+    assert(actual = expected);
+  end;
+
 end.
 
 
