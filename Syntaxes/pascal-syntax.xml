@@ -111,6 +111,7 @@
                     <include syntax="self" collection="exceptions" />
                     <include syntax="self" collection="nil" />
                     <include syntax="self" collection="booleans" />
+                    <include syntax="self" collection="modifiers" />
                 </subscopes>
             </scope>
         </collection>
@@ -150,6 +151,7 @@
                     <include syntax="self" collection="exceptions" />
                     <include syntax="self" collection="nil" />
                     <include syntax="self" collection="booleans" />
+                    <include syntax="self" collection="modifiers" />
                 </subscopes>
             </scope>
         </collection>
@@ -223,6 +225,7 @@
                     <include syntax="self" collection="exceptions" />
                     <include syntax="self" collection="nil" />
                     <include syntax="self" collection="booleans" />
+                    <include syntax="self" collection="modifiers" />
                 </subscopes>
             </scope>
         </collection>
@@ -371,6 +374,12 @@
             <scope name="pascal.booleans">
               <expression>(?i)(true|false)</expression>
               <capture number="1" name="pascal.value.boolean" />
+            </scope>
+        </collection>
+        <collection name="modifiers">
+            <scope name="pascal.modifiers">
+              <expression>(?i)(specialize)</expression>
+              <capture number="1" name="pascal.keyword.modifier.specialize" />
             </scope>
         </collection>
     </collections>

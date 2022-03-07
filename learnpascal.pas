@@ -124,6 +124,8 @@ implementation
   function booleanXor(left, right: Boolean): Boolean;
   begin
     booleanXor := left xor right;
+    specialize assertEqual<Integer>((10 + 2), 12);
+    specialize assertEqual<String>('a string', 'a string');
   end;
 
   generic procedure assertEqual<T>(actual, expected: T);
