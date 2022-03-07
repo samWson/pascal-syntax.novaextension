@@ -8,6 +8,9 @@ interface
 
   const
     PI = 3.14;
+    TRUTHY = true;
+    FALSY = false;
+    NULL = nil;
 
   type
     Vector = Array of Integer;

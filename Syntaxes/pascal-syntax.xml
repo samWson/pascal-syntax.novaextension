@@ -109,6 +109,8 @@
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
                     <include syntax="self" collection="exceptions" />
+                    <include syntax="self" collection="nil" />
+                    <include syntax="self" collection="booleans" />
                 </subscopes>
             </scope>
         </collection>
@@ -146,6 +148,8 @@
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
                     <include syntax="self" collection="exceptions" />
+                    <include syntax="self" collection="nil" />
+                    <include syntax="self" collection="booleans" />
                 </subscopes>
             </scope>
         </collection>
@@ -217,6 +221,8 @@
                     <include syntax="self" collection="case-statements" />
                     <include syntax="self" collection="operators" />
                     <include syntax="self" collection="exceptions" />
+                    <include syntax="self" collection="nil" />
+                    <include syntax="self" collection="booleans" />
                 </subscopes>
             </scope>
         </collection>
@@ -353,6 +359,18 @@
             <scope name="pascal.statement.raise">
               <expression>(?i)\b(raise)\b</expression>
               <capture number="1" name="pascal.keyword.condition.raise" />
+            </scope>
+        </collection>
+        <collection name="nil">
+            <scope name="pascal.nil">
+                <expression>(?i)(nil)</expression>
+                <capture number="1" name="pascal.value.null" />
+            </scope>
+        </collection>
+        <collection name="booleans">
+            <scope name="pascal.booleans">
+              <expression>(?i)(true|false)</expression>
+              <capture number="1" name="pascal.value.boolean" />
             </scope>
         </collection>
     </collections>
