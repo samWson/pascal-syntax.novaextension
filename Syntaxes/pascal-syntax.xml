@@ -197,7 +197,7 @@
                 </symbol>
                 <expression>(?i)(function)\s+([\w]+)(\(.*\)):\s+([\w]+);</expression>
                 <capture number="1" name="pascal.keyword.construct.function" />
-                <capture number="2" name="pascal.identifier.function" />
+                <capture number="2" name="pascal.definition.function" />
                 <capture number="3" name="pascal.function.parameter-list" />
                 <capture number="4" name="pascal.function.result-type" />
             </scope>
@@ -234,8 +234,8 @@
                 <expression>(?i)(generic)?\s?(procedure)\s+([\w]+)(&lt;.&gt;)?(\(.*\));</expression>
                 <capture number="1" name="pascal.keyword.modifier.generic" />
                 <capture number="2" name="pascal.keyword.construct.procedure" />
-                <capture number="3" name="pascal.identifier.function" />
-                <capture number="4" name="pascal.identifier.type" />
+                <capture number="3" name="pascal.definition.function" />
+                <capture number="4" name="pascal.definition.type" />
                 <capture number="5" name="pascal.function.parameter-list" />
             </scope>
         </collection>
