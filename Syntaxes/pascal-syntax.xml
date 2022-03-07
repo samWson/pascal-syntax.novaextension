@@ -131,6 +131,7 @@
                 <subscopes>
                     <include syntax="self" collection="interface" />
                     <include syntax="self" collection="implementation" />
+                    <include syntax="self" collection="uses" />
                     <include syntax="self" collection="comments" />
                     <include syntax="self" collection="types" />
                     <include syntax="self" collection="constants" />
@@ -149,10 +150,10 @@
             </scope>
         </collection>
         <collection name="uses">
-            <scope name="pascal.program.uses">
-                <expression>\b(?i)(uses)\s+([\w]+.*);</expression>
-                <capture number="1" name="pascal.keyword.uses" />
-                <capture number="2" name="pascal.keyword.uses.clause" />
+            <scope name="pascal.uses">
+                <expression>(?i)(uses)\s+([\w]+.*);</expression>
+                <capture number="1" name="pascal.keyword.construct.uses" />
+                <capture number="2" name="pascal.identifier.global.uses.clause" />
             </scope>
         </collection>
         <collection name="types">
