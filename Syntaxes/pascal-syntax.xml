@@ -102,6 +102,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
+                    <include syntax="self" collection="methods" />
                     <include syntax="self" collection="loop-statements" />
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
@@ -142,6 +143,7 @@
                     <include syntax="self" collection="functions" />
                     <include syntax="self" collection="compound-statements" />
                     <include syntax="self" collection="procedures" />
+                    <include syntax="self" collection="methods" />
                     <include syntax="self" collection="loop-statements" />
                     <include syntax="self" collection="if-statements" />
                     <include syntax="self" collection="with-statements" />
@@ -254,6 +256,29 @@
                 <capture number="3" name="pascal.definition.function" />
                 <capture number="4" name="pascal.definition.type" />
                 <capture number="5" name="pascal.function.parameter-list" />
+            </scope>
+        </collection>
+        <collection name="methods">
+            <scope name="pascal.method.procedure">
+                <symbol type="method" >
+                    <context behavior="subtree" />
+                </symbol>
+                <expression>(?i)(procedure)\s+([_a-z]+)\.([_a-z]+)\(()\);</expression>
+                <capture number="1" name="pascal.keyword.construct.procedure" />
+                <capture number="2" name="pascal.identifier.type.class" />
+                <capture number="3" name="pascal.definition.method" />
+                <capture number="4" name="pascal.parameter-list" />
+            </scope>
+            <scope name="pascal.method.function">
+                <symbol type="method" >
+                    <context behavior="subtree" />
+                </symbol>
+                <expression>(?i)(function)\s+([_a-z]+)\.([_a-z]+)\(()\)\s*:\s+([_a-z]+);</expression>
+                <capture number="1" name="pascal.keyword.construct.function" />
+                <capture number="2" name="pascal.identifier.type.class" />
+                <capture number="3" name="pascal.definition.method" />
+                <capture number="4" name="pascal.parameter-list" />
+                <capture number="5" name="pascal.identifier.type" />
             </scope>
         </collection>
         <collection name="loop-statements">
@@ -417,7 +442,7 @@
               <capture number="3" name="pascal.identifier.type" />
             </scope>
             <scope name="pascal.property.declaration">
-              <expression>(?i)(property)\s+([_a-z]+)\s*:\s+([_a-z]+)\s+(read)\s+([_a-z]+)\s+(write)\s+([_a-z]+);</expression>
+              <expression>(?i)(property)\s+([_a-z]+)\s*:\s+([_a-z]+)\s+(read)\s+([_a-z]+)\s+(write)\s+([_a-z]+)\((.+)\);</expression>
               <capture number="1" name="pascal.keyword.construct.property" />
               <capture number="2" name="pascal.definition.property" />
               <capture number="3" name="pascal.identifier.type" />
@@ -425,6 +450,7 @@
               <capture number="5" name="pascal.definition.property.reader" />
               <capture number="6" name="pascal.keyword.construct.write" />
               <capture number="7" name="pascal.definition.property.writer" />
+              <capture number="8" name="pascal.parameter-list" />
             </scope>
         </collection>
     </collections>

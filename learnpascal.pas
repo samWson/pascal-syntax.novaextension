@@ -25,7 +25,7 @@ interface
     coat: String;
   public
     procedure makeSomeNoise;
-    property coat: String read getCoat write setCoat;
+    property coat: String read getCoat write setCoat(color: String);
     function name: String;
   end;
 
@@ -40,6 +40,26 @@ interface
 implementation
   uses Addition, Subtraction;
 // comment
+
+  procedure TDog.makeSomeNoise();
+  begin
+    Writeln('Woof!')
+  end;
+
+  function TDog.name(): String;
+  begin
+    result := 'Major'
+  end;
+
+  function TDog.getCoat(): String;
+  begin
+    result := coat
+  end;
+
+  procedure TDog.setCoat(color: String);
+  begin
+    coat := color
+  end;
 
   function addTwo(value: Integer): Integer;
   begin
