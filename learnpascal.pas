@@ -20,6 +20,12 @@ interface
       y : Integer;
     end;
 
+  TDog = class
+    procedure makeSomeNoise;
+    property coat: String read getCoat write setCoat;
+    function name: String;
+  end;
+
   var
     result: Integer;
   (*

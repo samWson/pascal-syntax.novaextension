@@ -167,6 +167,20 @@
                 <expression>(?i)(type)</expression>
                 <capture number="1" name="pascal.keyword.type" />
             </scope>
+            <scope name="pascal.class-declaration">
+                <starts-with>
+                    <expression>(?i)([_a-zA-Z]+)\s+=\s+(class)</expression>
+                    <capture number="1" name="pascal.definition.class.name" />
+                    <capture number="2" name="pascal.keyword.construct.class" />
+                </starts-with>
+                <ends-with>
+                    <expression>(?i)(end);</expression>
+                    <capture number="1" name="pascal.keyword.construct.end" />
+                </ends-with>
+                <subscopes>
+                    <include syntax="self" collection="declarations" />
+                </subscopes>
+            </scope>
         </collection>
         <collection name="constants">
             <scope name="pascal.constant-declaration">
@@ -380,6 +394,29 @@
             <scope name="pascal.modifiers">
               <expression>(?i)(specialize)</expression>
               <capture number="1" name="pascal.keyword.modifier.specialize" />
+            </scope>
+        </collection>
+        <collection name="declarations">
+            <scope name="pascal.procedure.declaration">
+              <expression>(?i)(procedure)\s+([_a-z]+);</expression>
+              <capture number="1" name="pascal.keyword.construct.procedure" />
+              <capture number="2" name="pascal.definition.function" />
+            </scope>
+            <scope name="pascal.function.declaration">
+              <expression>(?i)(function)\s+([_a-z]+)\s*:\s+([_a-z]+);</expression>
+              <capture number="1" name="pascal.keyword.construct.function" />
+              <capture number="2" name="pascal.definition.function" />
+              <capture number="3" name="pascal.identifier.type" />
+            </scope>
+            <scope name="pascal.property.declaration">
+              <expression>(?i)(property)\s+([_a-z]+)\s*:\s+([_a-z]+)\s+(read)\s+([_a-z]+)\s+(write)\s+([_a-z]+);</expression>
+              <capture number="1" name="pascal.keyword.construct.property" />
+              <capture number="2" name="pascal.definition.property" />
+              <capture number="3" name="pascal.identifier.type" />
+              <capture number="4" name="pascal.keyword.construct.read" />
+              <capture number="5" name="pascal.definition.property.reader" />
+              <capture number="6" name="pascal.keyword.construct.write" />
+              <capture number="7" name="pascal.definition.property.writer" />
             </scope>
         </collection>
     </collections>
