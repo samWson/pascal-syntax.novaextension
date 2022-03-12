@@ -397,6 +397,14 @@
             </scope>
         </collection>
         <collection name="declarations">
+            <scope name="pascal.private.declaration">
+              <expression>(?i)(private)</expression>
+              <capture number="1" name="pascal.keyword.modifier.private" />
+            </scope>
+            <scope name="pascal.public.declaration">
+                <expression>(?i)(public)</expression>
+                <capture number="1" name="pascal.keyword.modifier.public" />
+            </scope>
             <scope name="pascal.procedure.declaration">
               <expression>(?i)(procedure)\s+([_a-z]+);</expression>
               <capture number="1" name="pascal.keyword.construct.procedure" />

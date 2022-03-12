@@ -21,6 +21,9 @@ interface
     end;
 
   TDog = class
+  private
+    coat: String;
+  public
     procedure makeSomeNoise;
     property coat: String read getCoat write setCoat;
     function name: String;
